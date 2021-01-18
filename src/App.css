@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark-bg{
+  background-color: #333;
+  color: #fff
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.blue-bg{
+  background-color: #005db9;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.trans{
+  background-color: rgba(255, 255, 255, 0.144);
+}
+.trans::placeholder{
+  color: #fff;
+}
+.trans:focus{
+  box-shadow: none;
+  border: 1px solid #333;
+}
+.trans:focus::placeholder{
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li{
+  list-style-type: none;
+}
+.card-holder{
+  background-image: url(./bg.jpg);
+  background-size: cover
+}
+/* .card-list{} */
+.card-item{
+  font-size: 0.9rem;
+  border-radius: 15px;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 0% 100%);
+  margin-bottom: 10px;
+}
+.title{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.card-item div{
+  margin-bottom: 10px;
+  width: 100%;
+  /* display: flex; */
+}
+.name{
+  font-size: 2rem; font-weight: bold;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+.card-holder{
+  width: 95% !important;
+}
+.card-list{
+  display: grid !important;
+  grid-template-columns: auto auto auto;
+}
+
 }
